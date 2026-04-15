@@ -28,15 +28,3 @@ src/
 pip install -r requirements.txt
 python -m src.create_sample_gtfs   # generate sample GTFS data
 ```
-
-## Status
-
-- [x] Step 1: Static GTFS ingestion
-- [ ] Step 2: Graph construction
-- [ ] Step 3: Realtime ingestion
-- [ ] Step 4: Feature engineering
-- [ ] Step 5: Label generation
-- [ ] Step 6: Dataset builder
-- [ ] Step 7: Baseline models
-- [ ] Step 8: Training & evaluation
-- [ ] Step 9: Notebook demo
