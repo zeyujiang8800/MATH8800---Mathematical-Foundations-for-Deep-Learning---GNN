@@ -1,0 +1,47 @@
+# =========================================================================
+#  MARTA GNN – Configuration
+# =========================================================================
+# Tip: Run `python -m marta_gnn.main --demo` to train quickly on mock data.
+# All values below can also be overridden via CLI flags (see --help).
+
+gtfs:
+  static_url: "https://itsmarta.com/google_transit_feed/google_transit.zip"
+  static_dir: "data/gtfs_static"
+
+realtime:
+  trip_updates_url: "https://gtfs-rt.itsmarta.com/TMGTFSRealTimeWebService/tripupdate/tripupdates.pb"
+  vehicle_positions_url: "https://gtfs-rt.itsmarta.com/TMGTFSRealTimeWebService/vehicle/vehiclepositions.pb"
+  api_key: ""        # or set env var MARTA_API_KEY
+
+data:
+  processed_dir: "data/processed"
+  use_mock: true     # true = synthetic data (no API key needed), false = live feeds
+  mock_num_stops: 200          # number of synthetic stops to generate
+  mock_num_routes: 10          # number of synthetic routes
+  mock_num_trips: 50           # number of synthetic trips
+
+features:
+  time_bins: 24                # cyclical hour encoding bins
+  delay_threshold_seconds: 300 # 300s = 5 min → "at-risk" label
+  historical_window_days: 7
+
+model:
+  type: "gcn"            # "gcn" (uses graph) or "mlp" (features only)
+  hidden_dim: 64         # width of hidden layers
+  num_layers: 3          # GCN depth (ignored for mlp)
+  dropout: 0.3
+  learning_rate: 0.001
+  weight_decay: 0.0005
+  epochs: 200            # max epochs (early stopping usually fires first)
+  patience: 20           # epochs without val improvement before stopping
+  batch_size: 32
+
+training:
+  train_ratio: 0.6
+  val_ratio: 0.2
+  test_ratio: 0.2
+  seed: 42
+
+logging:
+  level: "INFO"          # DEBUG for verbose output
+  file: "logs/marta_gnn.log"
