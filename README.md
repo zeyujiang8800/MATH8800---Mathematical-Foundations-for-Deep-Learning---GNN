@@ -1,6 +1,25 @@
 # GNN w/Cora + GNN w/MARTA Transit – Stop-Level Delay Prediction
 
-Graph Neural Network pipeline for predicting stop-level delay risk on the MARTA transit network using static GTFS and GTFS-realtime data. For the MARTA example, we use a GTFS-inspired mock transit dataset generated to resemble a transit stop network. Nodes represent stops, edges represent connectivity between stops, and node features encode stop-level and delay-related attributes. A binary label is assigned based on whether a stop exceeds a delay threshold of 300 seconds. This example is intended to demonstrate how GNNs can be applied to transportation networks, rather than to claim deployment-ready performance on live MARTA data.
+## Project Overview
+
+Many real-world datasets are naturally represented as graphs. In a graph, objects are represented as **nodes**, and relationships between objects are represented as **edges**. Examples include citation networks, transportation systems, social networks, molecular structures, and knowledge graphs.
+
+Traditional neural networks such as CNNs and RNNs are designed for regular grid or sequence data. On the other hand, graphs have unordered neighborhoods and a non-static neighbors. GNNs solve this problem by allowing each node to update its representation using information from its neighboring nodes.
+
+This project focuses on the following ideas:
+
+- Graph representation using adjacency matrices and node feature matrices
+- Graph Convolutional Networks
+- Graph Attention Networks
+- Node classification
+- Comparison between GNNs and non-graph baselines
+
+
+The goal of this project is to introduce the mathematical foundations of GNNs, explain the message-passing framework, and demonstrate practical applications through two examples:
+
+1. **Cora citation network node classification**
+2. **MARTA stop delay-risk prediction using a GTFS-inspired transit graph**
+
 
 Please see the gnn.ipynb and demo.ipynb notebook files for an interactive example. The notebooks can be ran smoothly with a run-all button
 
