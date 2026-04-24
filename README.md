@@ -1,6 +1,6 @@
 # GNN MARTA Transit – Stop-Level Delay Prediction
 
-Graph Neural Network pipeline for predicting stop-level delay risk on the MARTA transit network using static GTFS and GTFS-realtime data. Please see the notebook file for an interactive example.
+Graph Neural Network pipeline for predicting stop-level delay risk on the MARTA transit network using static GTFS and GTFS-realtime data. Please see the gnn.ipynb and demo.ipynb notebook files for an interactive example.
 
 ## Project Structure
 
