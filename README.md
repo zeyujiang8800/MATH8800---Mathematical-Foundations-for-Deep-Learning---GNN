@@ -2,20 +2,17 @@
 
 ## Project Overview
 
-Many real-world datasets are naturally represented as graphs. In a graph, objects are represented as **nodes**, and relationships between objects are represented as **edges**. Examples include citation networks, transportation systems, social networks, molecular structures, and knowledge graphs.
+Many real-world datasets are represented as graphs. In a graph, objects are represented as **nodes**, and relationships between objects are represented as **edges**. Examples include citation networks, transportation systems, social networks, molecular structures, and knowledge graphs.
 
 Traditional neural networks such as CNNs and RNNs are designed for regular grid or sequence data. On the other hand, graphs have unordered neighborhoods and a non-static neighbors. GNNs solve this problem by allowing each node to update its representation using information from its neighboring nodes.
 
 This project focuses on the following ideas:
-
-- Graph representation using adjacency matrices and node feature matrices
 - Graph Convolutional Networks
-- Graph Attention Networks
 - Node classification
 - Comparison between GNNs and non-graph baselines
 
 
-The goal of this project is to introduce the mathematical foundations of GNNs, explain the message-passing framework, and demonstrate practical applications through two examples:
+The goal of this project is to showcase how to implement the mathematical foundations of GNNs and practical applications through two examples:
 
 1. **Cora citation network node classification**
 2. **MARTA stop delay-risk prediction using a GTFS-inspired transit graph**
