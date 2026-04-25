@@ -2,9 +2,8 @@
 
 ## Project Overview
 
-Many real-world datasets are represented as graphs. In a graph, objects are represented as **nodes**, and relationships between objects are represented as **edges**. Examples include citation networks, transportation systems, social networks, molecular structures, and knowledge graphs.
-
-Traditional neural networks such as CNNs and RNNs are designed for regular grid or sequence data. On the other hand, graphs have unordered neighborhoods and a non-static neighbors. GNNs solve this problem by allowing each node to update its representation using information from its neighboring nodes.
+Many real-world datasets are represented as graphs. In a graph, objects are represented as **nodes**, and relationships between objects are represented as **edges**.
+Traditional architectures such as CNNs and RNNs are designed for regular grid or sequence data. On the other hand, graphs have unordered neighborhoods and a non-static neighbors. Thus, GNNs solve this problem by allowing each node to update its representation using information from its neighboring nodes.
 
 This project focuses on the following ideas:
 - Graph Convolutional Networks
